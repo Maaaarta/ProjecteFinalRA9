@@ -1,3 +1,4 @@
+// token; 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
 // backend/config/db.js
 const mongoose = require('mongoose');
 
