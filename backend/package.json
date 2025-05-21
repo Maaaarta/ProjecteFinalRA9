@@ -8,7 +8,7 @@
     "dev": "nodemon app.js"
   },
   "keywords": [],
-  "author": "Marta",
+  "author": "Marta,Laia",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
