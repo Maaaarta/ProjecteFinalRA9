@@ -1,4 +1,3 @@
-// backend/controllers/animalController.js
 const Animal = require('../models/Animal');
 
 exports.getAllAnimals = async (req, res) => {

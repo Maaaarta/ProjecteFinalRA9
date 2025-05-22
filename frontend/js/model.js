@@ -7,10 +7,23 @@ export async function obtenirAnimals() {
 }
 
 export async function afegirAnimal(animal) {
-    const resposta = await fetch(API_URL, {
+    const res = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(animal)
     });
-    return await resposta.json();
+    return await res.json();
+}
+
+export async function actualitzarAnimal(id, animal) {
+    const res = await fetch(`${API_URL}/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(animal)
+    });
+    return await res.json();
+}
+
+export async function eliminarAnimal(id) {
+    await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
 }
