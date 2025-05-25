@@ -24,6 +24,7 @@ async function manejarNouAnimal(animal) {
     } else {
         await afegirAnimal(animal);
     }
+
     await carregarAnimals();
 }
 
@@ -33,11 +34,14 @@ function prepararEdicio(animal) {
     formulari.especie.value = animal.especie;
     formulari.edat.value = animal.edat;
     formulari.propietari.value = animal.propietari;
-    formulari.observacions.value = animal.observacions;
+    formulari.observacions.value = animal.observacions || '';
     idEditant = animal._id;
 }
 
 async function manejarEliminar(id) {
+    const confirmat = window.confirm("Segur que vols eliminar aquest registre d'animal?");
+    if (!confirmat) return;
+
     await eliminarAnimal(id);
     await carregarAnimals();
 }
