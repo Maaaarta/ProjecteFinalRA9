@@ -2,6 +2,9 @@
 
 Aquesta aplicació permet registrar i gestionar informació sobre animals que arriben a una clínica veterinària.
 
+## Enllaç del repositori GitHub (master)
+https://github.com/Maaaarta/ProjecteFinalRA9.git
+
 ## Arquitectura i Estructura
 
 Aplicació desenvolupada amb:
@@ -19,3 +22,5 @@ Estructura:
 cd backend
 npm install
 node app.js
+```
+
